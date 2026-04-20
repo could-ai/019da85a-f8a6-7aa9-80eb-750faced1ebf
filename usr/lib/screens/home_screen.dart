@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'text_screen.dart';
 import 'audio_screen.dart';
 import 'visual_screen.dart';
+import 'wellness_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -63,6 +64,17 @@ class HomeScreen extends StatelessWidget {
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => const VisualScreen()),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  _ToolCard(
+                    title: 'Bienestar y Reflexión',
+                    subtitle: 'Un espacio seguro para el desahogo emocional, respiración y calma mental.',
+                    icon: Icons.spa,
+                    color: Colors.tealAccent,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const WellnessScreen()),
                     ),
                   ),
                 ],
